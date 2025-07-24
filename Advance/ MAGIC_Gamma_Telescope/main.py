@@ -67,7 +67,7 @@ y_pred = knn_model.predict(x_test)
 
 #print(classification_report(y_test, y_pred))
 
-# - naiv Bayes
+# - naiv Bayes -
 
 from sklearn.naive_bayes import GaussianNB
 
@@ -76,6 +76,18 @@ nb_model.fit(x_train, y_train)
 
 y_pred = nb_model.predict(x_test)
 
+#print(classification_report(y_test, y_pred))
+
+# logistic regression
+
+from sklearn.linear_model import LogisticRegression
+
+lr_model = LogisticRegression()
+lr_model.fit(x_train, y_train)
+
+y_pred = lr_model.predict(x_test)
+
 print(classification_report(y_test, y_pred))
+
 
  
