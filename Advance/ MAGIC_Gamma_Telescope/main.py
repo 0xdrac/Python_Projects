@@ -87,7 +87,19 @@ lr_model.fit(x_train, y_train)
 
 y_pred = lr_model.predict(x_test)
 
+#print(classification_report(y_test, y_pred))
+
+#support vector machine
+
+from sklearn.svm import SVC
+
+svm_model = SVC()
+svm_model.fit(x_train, y_train)
+
+y_pred = svm_model.predict(x_test)
+
 print(classification_report(y_test, y_pred))
+
 
 
  
